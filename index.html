@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Biblioteca de Máscaras — Laudos de Hemodinâmica HIAE</title>
 <style>
 body{font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;max-width:820px;margin:24px auto;padding:0 16px;line-height:1.5;color:#1a1a1a;}
-h1{font-size:24px;border-bottom:2px solid #0a5;padding-bottom:6px;}
-h2{font-size:18px;margin-top:28px;border-bottom:1px solid #ccc;padding-bottom:3px;}
+h1{font-size:24px;border-bottom:2px solid #0a5;padding-bottom:6px;} h2{font-size:18px;margin-top:28px;border-bottom:1px solid #ccc;padding-bottom:3px;}
 h3{font-size:15px;} code,pre{font-family:Menlo,Consolas,monospace;font-size:13px;background:#f5f5f5;}
 pre{padding:10px;border-radius:6px;overflow-x:auto;} table{border-collapse:collapse;} td,th{border:1px solid #ccc;padding:4px 8px;}
-blockquote{border-left:3px solid #0a5;margin:8px 0;padding:2px 12px;color:#333;background:#f7fbf9;}
-hr{border:none;border-top:1px solid #ddd;margin:24px 0;}
+blockquote{border-left:3px solid #0a5;margin:8px 0;padding:2px 12px;color:#333;background:#f7fbf9;} hr{border:none;border-top:1px solid #ddd;margin:24px 0;}
 </style></head><body>
 <h1>Biblioteca de Máscaras — Laudos de Hemodinâmica HIAE</h1>
 <p>Base canônica do agente. As máscaras abaixo são o <strong>gabarito literal de redação</strong>.
@@ -19,21 +16,41 @@ o estilo sucinto. Idioma padrão PT; EN sob demanda. Uso <strong>impromptu</stro
 laudo estruturado. <strong>Sem cabeçalho administrativo</strong> (sem Data, sem Operador) e <strong>sem
 identificação do paciente</strong> (nunca incluir nome, prontuário ou qualquer identificador
 pessoal). O laudo começa direto no título da máscara em CAIXA ALTA.</p>
-<p><strong>Angiografia sempre completa:</strong> todo laudo com componente angiográfico (cateterismo ou
-qualquer angioplastia) descreve <strong>acesso (lado e calibre Fr; se femoral, punção guiada por
-USG), anestesia, dominância e a árvore coronária completa</strong> (TCE/DA/Cx/CD). Itens não
-ditados desses campos são <strong>perguntados</strong> antes de gerar (ver instruções do agente). USG
-só se pergunta em acesso femoral. Nas angioplastias, incluir um bloco <code>ACHADOS
-ANGIOGRÁFICOS</code> (formato da máscara 1) antes da descrição do procedimento.</p>
-<p><strong>Técnica sintética, Descrição em prosa:</strong> a seção <strong>Técnica</strong> permanece <strong>sintética/
-estruturada</strong> (linhas curtas, como na Biblioteca). A <strong>Descrição do procedimento</strong> é
-redigida como <strong>parágrafo narrativo</strong> sucinto e completo, <strong>não</strong> bullets soltos.
-Permanecem estruturados também: a árvore coronária em <code>ACHADOS ANGIOGRÁFICOS</code> (vaso a
-vaso), os valores de IVUS/OCT/fisiologia, e o checklist de <code>Complicações específicas</code> do
-TAVI. A <code>CONCLUSÃO</code> é sempre frase única.</p>
+<p><strong>Bloco <code>ACHADOS ANGIOGRÁFICOS</code> (árvore coronária completa) SÓ quando houve cateterismo
+diagnóstico.</strong> Angioplastia <strong>isolada</strong> NÃO leva esse bloco — a lesão tratada aparece na
+Técnica (Lesão-alvo) e na Descrição do procedimento; nunca descrever a árvore de um
+cateterismo que não foi feito. <strong>Cateterismo + angioplastia no mesmo ato:</strong> título único
+<strong><code>CATETERISMO CARDÍACO E ANGIOPLASTIA CORONÁRIA</code></strong>, com Técnica → ACHADOS ANGIOGRÁFICOS (do
+cateterismo) → Descrição (da ATC) → CONCLUSÃO única.</p>
+<p><strong>Estilo (legível em PDF):</strong> a seção <strong>Técnica</strong> permanece <strong>sintética</strong> (linhas curtas).
+Os <strong>ACHADOS ANGIOGRÁFICOS</strong> são em <strong>prosa SEPARADA por vaso</strong> — uma sentença por artéria,
+cada uma em sua própria linha (não um parágrafo único, não uma lista de "campo: ___"). A
+<strong>Descrição do procedimento</strong> é <strong>prosa corrida</strong>. As seções de <strong>achados/resultados de
+IVUS/OCT/fisiologia</strong> e o <strong>controle/Complicações específicas do TAVI</strong> ficam em <strong>linhas
+separadas e legíveis</strong> (uma por parâmetro/achado). A <code>CONCLUSÃO</code> é sempre frase única. Vale
+para <strong>todos os procedimentos</strong> (cateterismo, angioplastia, IVUS, OCT, fisiologia, TAVI).</p>
 <p><strong>Perguntas condicionais:</strong> se não houver menção explícita, perguntar (a) se houve
 <strong>cateterismo diagnóstico</strong> no mesmo ato; (b) em bifurcação, a <strong>estratégia</strong> (provisional
 ou 2 stents — qual técnica).</p>
+<p><strong>Descrição do procedimento — verbose, completa e objetiva.</strong> Não resumir em poucas linhas:
+descrever cada etapa do ato em frases completas, na ordem (acesso/introdutor → cateterização
+seletiva e cateter-guia → anticoagulação → transposição da lesão e corda-guia + proteção de
+ramos → preparo/pré-dilatação com balão tipo/medida/atm → modificação de placa → implante do
+stent marca/medida/atm/segmento → pós-dilatação/POT/kissing/rePOT → imagem/fisiologia adjunta
+→ controle angiográfico final). Só com o que foi ditado; sem floreio e sem inventar. Exemplo
+do nível de detalhe esperado (angioplastia de DA):</p>
+<blockquote>
+<p><em>"Pelo acesso radial direito, realizou-se a cateterização seletiva da coronária esquerda
+com cateter-guia EBU 3.5 6F (concordância: alvo na DA → coronária esquerda). Após
+anticoagulação plena com heparina não-fracionada, a lesão do terço médio da DA foi
+transposta com corda-guia de 0,014″,
+posicionada no leito distal do vaso. Procedeu-se à pré-dilatação da lesão com balão
+semicomplacente 3,0 × 15 mm a 12 atm, com boa expansão. Em seguida, implantou-se stent
+farmacológico Synergy 3,5 × 18 mm a 14 atm recobrindo o segmento médio da DA, seguido de
+pós-dilatação com balão não-complacente 3,5 × 12 mm a 18 atm para otimização da aposição.
+O controle angiográfico final evidenciou fluxo TIMI 3, sem estenose residual significativa
+e sem dissecção de bordas."</em></p>
+</blockquote>
 <hr />
 <h2>1) Cateterismo Cardíaco Diagnóstico</h2>
 <p><strong>CATETERISMO CARDÍACO DIAGNÓSTICO</strong></p>
@@ -46,45 +63,59 @@ Intercorrências: </em></strong>.</p>
 <p><strong>Cateterismo diagnóstico isolado = ZERO perguntas.</strong> Use o que foi ditado; para o que
 faltar, aplique os defaults e gere direto: <strong>acesso radial D 6F</strong>, <strong>anestesia local +
 sedação</strong>, <strong>dominância direita</strong> (DP+VP da CD), <strong>DA atinge o ápice</strong>, e todo vaso/ramo/
-segmento não citado = <strong>"sem lesões"</strong>. Só substitua um default se o médico ditar diferente
-(femoral, lesão, dominância esquerda/codominante, outra extensão da DA).
+segmento não citado = <strong>"sem lesões obstrutivas"</strong>. <strong>SEMPRE escreva a árvore completa,
+incluindo os ramos diagonais, septais e marginais esquerdos — mesmo normais ("sem lesões
+obstrutivas"); nunca omita os ramos.</strong> Só substitua um default se o médico ditar diferente (femoral, lesão, dominância
+esquerda/codominante, outra extensão da DA).
 Regra de dominância (quando a origem é descrita): DP da CD → direita; DP da Cx → esquerda;
 DP da CD + VP da Cx → codominante.</p>
 </blockquote>
-<p>Dominância: direita / esquerda / codominante.</p>
-<p>Coronária esquerda:
-TCE: ___ (sem lesões por padrão; lesão <strong>% / calcificação / ectasia se dito).
-DA: ___ (sem lesões por padrão; lesão </strong>% prox/médio/distal se dito); extensão: atinge o ápice (padrão) / contorna o ápice / não atinge o ápice. Ramos diagonais (1ª/2ª/3ª): ___ (sem lesões se não descritos). Ramos septais: ___ (idem).
-Cx: ___ (sem lesões por padrão; lesão __% prox/médio/distal se dito). Ramos marginais obtusos (1ª/2ª/3ª): ___ (sem lesões se não descritos).</p>
-<p>Coronária direita: ___ (sem lesões por padrão; lesão __% prox/médio/distal se dito). DP e ramo ventricular posterior (VP)/posterolaterais: origem conforme a dominância.</p>
-<p>Ventriculografia: ___ (só se realizada).</p>
-<p><strong>CONCLUSÃO:</strong> ___</p>
+<p>Redigir em <strong>prosa, mas SEPARADO por vaso</strong> — uma sentença por artéria, <strong>cada uma em sua
+própria linha</strong> (legível em PDF; não um parágrafo único nem uma lista de "campo: ___").
+Percorrer a árvore completa, descrevendo TODOS os ramos; vaso/ramo não citado =
+<strong>"sem lesões obstrutivas"</strong>; nunca omitir os ramos. Pontuação: vírgula (lê melhor em
+PT-BR); ";" só dentro da descrição do mesmo vaso. Não escrever "(vaso-alvo)" nos achados.
+Modelo:</p>
+<p>Dominância: <strong><em>.
+Tronco da coronária esquerda: sem lesões obstrutivas (ou lesão </em>_%).
+Artéria descendente anterior: sem lesões obstrutivas (ou lesão </strong>% terço <strong>), ___ o ápice (atinge/contorna/não atinge), ramos diagonais e septais sem lesões obstrutivas (ou conforme dito).
+Artéria circunflexa: [se dominância esquerda, começar com "dominante, "] sem lesões obstrutivas (ou lesão </strong>% terço <strong>), ramos marginais esquerdos sem lesões obstrutivas (ou conforme dito).
+Artéria coronária direita: [se dominância direita, começar com "dominante, "] sem lesões obstrutivas (ou lesão </strong>% terço __), descendente posterior sem lesões obstrutivas (ou conforme dito), ramo ventricular posterior sem lesões obstrutivas (ou conforme dito).
+Ventriculografia: ___ (só se realizada).</p>
+<blockquote>
+<p>A <strong>artéria dominante</strong> começa com "dominante" (direita → CD; esquerda → Cx). <strong>DP e VP</strong>
+são descritos sempre, cada um com seu status (default "sem lesões obstrutivas").</p>
+</blockquote>
+<p><strong>CONCLUSÃO:</strong> Doença arterial coronariana com padrão <strong>não obstrutivo</strong> OU <strong>obstrutivo
+uniarterial/biarterial/triarterial</strong>, nomeando o(s) vaso(s) com lesão significativa (ex.:
+"padrão obstrutivo uniarterial (lesão na coronária direita)"). Dominância ___.</p>
 <hr />
 <h2>2) Angioplastia Coronariana (padrão)</h2>
 <p><strong>ANGIOPLASTIA CORONARIANA</strong></p>
 <p><strong>Técnica</strong>
 Acesso vascular: <strong><em>; hemostasia: </em></strong>.
 Cateter-guia: ___ - <strong><em>F.
-Anticoagulação: HNF ___ UI/kg (controlado por TCA).
+Anticoagulação: HNF 100 UI/kg (controlada por TCA) — padrão.
 Lesão-alvo: ___ (vaso/segmento). Intercorrências: nenhuma / </em></strong>.</p>
-<p><strong>Descrição do procedimento</strong>
-Cateterização seletiva da artéria ___ com cateter-guia <strong><em>.
-Após anticoagulação, posicionada corda-guia 0,014" no terço distal do vaso-alvo.
+<p><strong>Descrição do procedimento</strong> (redigir em prosa VERBOSE — ver nota de estilo no topo)
+Cateterização seletiva da coronária ___ (<strong>esquerda</strong> se alvo DA/Cx/diagonal/marginal; <strong>direita</strong> se alvo CD/DP/VP) com cateter-guia ___ (ex.: EBU, JR, AL).
+Após anticoagulação, posicionada corda-guia 0,014" no leito distal do vaso tratado.
 Pré-dilatação: balão ___ x ___ mm a ___ atm (se aplicável).
-Modificação de placa (se aplicável): cutting/scoring/IVL/rotablator/orbital/laser - </em></strong>.
-Implante de stent farmacológico: ___ (marca) ___ x ___ mm, a ___ atm, em <strong><em>. Overlap: sim/não.
+Modificação de placa (se aplicável): cutting/scoring/IVL/rotablator/orbital/laser - <strong><em>.
+Implante de stent farmacológico: ___ (marca) ___ x ___ mm, a ___ atm, em </em></strong>. Overlap: sim/não.
 Pós-dilatação: NC ___ x ___ mm a ___ atm.
-Angiografia final: TIMI </em></strong>; residual <strong><em>%; dissecção: não / </em></strong>.</p>
+Angiografia final: TIMI <strong><em>; residual </em></strong>%; dissecção: não / ___.</p>
 <p><strong>CONCLUSÃO:</strong> Angioplastia com implante de ___ stent(s) em ___, com ótimo resultado angiográfico e TIMI 3.</p>
 <hr />
 <h2>3) Angioplastia de Bifurcação</h2>
 <p><strong>ANGIOPLASTIA DE BIFURCAÇÃO - ___ (ex.: TCE-DA/Cx; DA-Dg; Cx-Mg)</strong></p>
 <p><strong>Técnica</strong>
 Acesso: <strong><em>; hemostasia: </em></strong>. Cateter-guia: ___ - <strong><em>F.
-Anticoagulação: HNF ___ UI/kg (controlada por TCA).
+Anticoagulação: HNF 100 UI/kg (controlada por TCA) — padrão.
 Estratégia: provisional / 2 stents (DK-crush / culotte / TAP / T-stent) / outra: </em></strong>.
 Intercorrências: nenhuma / ___.</p>
-<p><strong>Descrição do procedimento</strong>
+<p><strong>Descrição do procedimento</strong> (redigir em prosa VERBOSE — ver nota de estilo no topo)
+Cateterização seletiva da coronária ___ (<strong>esquerda</strong> se a bifurcação for DA-Dg/TCE-DA-Cx/Cx-Mg; <strong>direita</strong> se CD-DP) com cateter-guia ___ (ex.: EBU, JR, AL).
 Corda-guia 0,014" em vaso principal (VP): <strong><em>; e em ramo lateral (RL): </em></strong>.
 Pré-dilatação VP: <strong><em>; RL: ___ (se aplicável).
 Stent no VP: ___ x ___ mm a ___ atm.
@@ -96,60 +127,68 @@ Angiografia final: TIMI ___ em VP/RL; residual <strong><em>%; sem complicações
 <p><strong>CONCLUSÃO:</strong> Angioplastia de bifurcação ___ com ___ stent(s), estratégia ___, resultado final ótimo e TIMI 3.</p>
 <hr />
 <h2>4) IVUS — Laudo + Angioplastia guiada por IVUS</h2>
-<h3>4A) IVUS — Laudo</h3>
+<h3>4A) IVUS — Laudo (diagnóstico isolado)</h3>
 <p><strong>ULTRASSOM INTRACORONÁRIO (IVUS)</strong></p>
 <p><strong>Técnica</strong>
-Vaso/segmento: <strong><em>. Pullback: automático/manual; velocidade: ___ mm/s.
-Nitrato IC: sim/não - </em></strong>. Intercorrências: nenhuma / ___.</p>
-<p><strong>Achados</strong>
+Vaso/segmento: <strong><em>.
+Intercorrências: nenhuma / </em></strong>.</p>
+<p><strong>Descrição do procedimento</strong> (prosa VERBOSE — como na angioplastia)
+Pelo acesso <strong><em>, realizou-se a cateterização seletiva da coronária ___ (esquerda/direita conforme o vaso) com cateter-guia </em></strong>. Após heparinização sistêmica com 100 UI/kg, avançou-se o cateter de ultrassom intracoronário até o terço distal da ___ (vaso), procedendo-se a pullback ___ (automático/manual) até o óstio.</p>
+<p><strong>Achados</strong> (linhas separadas e legíveis)
+MLA: ___ mm² em ___ (segmento). EEM mínima: ___ mm². Carga de placa: <strong><em>%.
 Referências: distal ___ mm² / proximal ___ mm² (se aplicável).
-MLA: ___ mm² em <strong><em>. EEM mínima: ___ mm². Carga de placa: </em></strong>%.
-Morfologia: fibrosa / fibrolipídica / calcificada (arco <strong><em>°, extensão ___ mm).
-Ruptura/trombo/dissecção: não/sim - </em></strong>.
-Stent (se presente): MSA ___ mm²; aposição: adequada/inadequada; dissecção de borda: não/sim.</p>
-<p><strong>CONCLUSÃO:</strong> IVUS de ___ demonstrando ___.</p>
-<h3>4B) Angioplastia com IVUS (texto de procedimento)</h3>
+Morfologia: fibrosa / fibrolipídica / calcificada (arco </em></strong>°, extensão ___ mm).
+Ruptura/trombo/dissecção: não / sim - ___.
+Stent (se presente): MSA ___ mm², aposição adequada/inadequada, dissecção de borda não/sim.</p>
+<p><strong>CONCLUSÃO:</strong> IVUS da ___ demonstrando ___.</p>
+<h3>4B) Angioplastia guiada por IVUS</h3>
 <p><strong>ANGIOPLASTIA COM ULTRASSOM INTRACORONÁRIO (IVUS)</strong></p>
-<p>Cateter-guia: ___ - <strong><em>F. Anticoagulação: </em></strong>. Lesão-alvo: <strong><em>.
-IVUS pré: MLA: ___ mm². Referências: distal ___ mm / proximal ___ mm.
-Placa: fibrosa / lipídica / calcificada (arco </em></strong>°), plaque burden __%.
-Preparação: ___ (NC/cutting/scoring/IVL/aterectomia) ___.
-Implante de stent ___ x ___ mm; pós-dilatação NC ___ x ___ mm.
-IVUS final: stent bem aposto e bem expandido; MSA ___ mm²; sem dissecções relevantes.
-Angiografia final: TIMI 3.</p>
-<p><strong>CONCLUSÃO:</strong> Angioplastia guiada por IVUS com ___ stent(s) em ___, resultado ótimo.</p>
+<p><strong>Técnica</strong>
+Acesso vascular: <strong><em>. Cateter-guia: ___ - </em></strong>F.
+Anticoagulação: HNF 100 UI/kg (controlada por TCA) — padrão.
+Lesão-alvo: ___ (vaso/segmento). Intercorrências: nenhuma / ___.</p>
+<p><strong>Descrição do procedimento</strong> (prosa VERBOSE)
+Pelo acesso <strong><em>, realizou-se a cateterização seletiva da coronária ___ com cateter-guia </em></strong>. Após heparinização sistêmica com 100 UI/kg, posicionada corda-guia 0,014" no leito distal da <strong><em>. Realizado ultrassom intracoronário pré-intervenção (MLA ___ mm², placa ___ arco </em></strong>°, carga de placa <strong><em>%). Procedeu-se à preparação da lesão com ___ e implante de stent ___ x ___ mm em </em></strong>. O ultrassom de controle demonstrou stent bem aposto e expandido (MSA ___ mm²), sem dissecções de borda. Controle angiográfico final com fluxo TIMI ___.</p>
+<p><strong>Achados do IVUS</strong> (linhas separadas)
+MLA pré: ___ mm². MSA pós: ___ mm². Carga de placa: ___%.</p>
+<p><strong>CONCLUSÃO:</strong> Angioplastia da ___ guiada por IVUS com ___ stent(s), MSA ___ mm² e ótimo resultado (TIMI ___).</p>
 <hr />
 <h2>5) OCT — Laudo + Angioplastia guiada por OCT</h2>
-<h3>5A) OCT — Laudo</h3>
+<h3>5A) OCT — Laudo (diagnóstico isolado)</h3>
 <p><strong>TOMOGRAFIA DE COERÊNCIA ÓPTICA (OCT)</strong></p>
 <p><strong>Técnica</strong>
-Vaso/segmento: <strong><em>. Flush: </em></strong>; volume/taxa: <strong><em>. Pullback: ___ mm.
+Vaso/segmento: <strong><em>.
 Intercorrências: nenhuma / </em></strong>.</p>
-<p><strong>Achados</strong>
+<p><strong>Descrição do procedimento</strong> (prosa VERBOSE)
+Pelo acesso <strong><em>, realizou-se a cateterização seletiva da coronária ___ (esquerda/direita conforme o vaso) com cateter-guia </em></strong>. Após heparinização sistêmica com 100 UI/kg, avançou-se o cateter de OCT até o terço distal da ___ (vaso), com flush ___ e pullback de ___ mm.</p>
+<p><strong>Achados</strong> (linhas separadas e legíveis)
 MLA: ___ mm². Referências: distal ___ mm / proximal ___ mm.
 Placa: fibrosa / lipídica / calcificada (arco <strong><em>°, espessura ___ mm).
-Ruptura/erosão/trombo: não/sim - </em></strong>. TCFA: não/sim - capa mínima ___ µm.
-Stent (se presente): MSA ___ mm²; malaposição: não/sim; dissecção de borda: não/sim.</p>
-<p><strong>CONCLUSÃO:</strong> OCT de ___ evidenciando ___.</p>
-<h3>5B) Angioplastia com OCT (texto de procedimento)</h3>
+Ruptura/erosão/trombo: não / sim - </em></strong>. TCFA: não / sim - capa mínima ___ µm.
+Stent (se presente): MSA ___ mm², malaposição não/sim, dissecção de borda não/sim.</p>
+<p><strong>CONCLUSÃO:</strong> OCT da ___ evidenciando ___.</p>
+<h3>5B) Angioplastia guiada por OCT</h3>
 <p><strong>ANGIOPLASTIA COM TOMOGRAFIA DE COERÊNCIA ÓPTICA (OCT)</strong></p>
-<p>OCT pré: i) <strong><em>; ii) referências </em></strong>/<strong><em>; iii) MLA ___ mm².
-Preparação: </em></strong>; stent ___ x ___ mm; pós-dilatação NC ___.
-OCT final: boa expansão/aposição (MSA ___ mm²), sem complicações relevantes.
-Angiografia final: TIMI 3.</p>
-<p><strong>CONCLUSÃO:</strong> Angioplastia guiada por OCT com resultado ótimo.</p>
+<p><strong>Técnica</strong>
+Acesso vascular: <strong><em>. Cateter-guia: ___ - </em></strong>F.
+Anticoagulação: HNF 100 UI/kg (controlada por TCA) — padrão.
+Lesão-alvo: ___ (vaso/segmento). Intercorrências: nenhuma / ___.</p>
+<p><strong>Descrição do procedimento</strong> (prosa VERBOSE)
+Pelo acesso <strong><em>, realizou-se a cateterização seletiva da coronária ___ com cateter-guia </em></strong>. Após heparinização sistêmica com 100 UI/kg, posicionada corda-guia 0,014" no leito distal da <strong><em>. Realizada OCT pré-intervenção (MLA ___ mm², placa </em></strong>, referências <strong><em>/</em></strong>). Procedeu-se à preparação da lesão com ___ e implante de stent ___ x ___ mm em <strong><em>. A OCT de controle demonstrou boa expansão e aposição (MSA ___ mm²), sem complicações relevantes. Controle angiográfico final com fluxo TIMI </em></strong>.</p>
+<p><strong>Achados da OCT</strong> (linhas separadas)
+MLA pré: ___ mm². MSA pós: ___ mm².</p>
+<p><strong>CONCLUSÃO:</strong> Angioplastia da ___ guiada por OCT com ___ stent(s), MSA ___ mm² e ótimo resultado (TIMI ___).</p>
 <hr />
 <h2>6) Avaliação Fisiológica (FFR/iFR/RFR)</h2>
 <p><strong>AVALIAÇÃO FISIOLÓGICA CORONARIANA (FFR/DFR/RFR)</strong></p>
 <p><strong>Técnica</strong>
-Vaso/lesão: <strong><em>. Sistema: </em></strong>. Equalização: óstio/TCE.
-Nitrato IC: sim/não - <strong><em>.
-Hiperemia (se FFR): adenosina IV ___ µg/kg/min (ou IC </em></strong>) - <strong><em>.
-Intercorrências: nenhuma / </em></strong>.</p>
+Vaso/lesão: <strong><em>. Sistema: </em></strong>.
+Intercorrências: nenhuma / ___.</p>
+<p><strong>Descrição do procedimento</strong> (prosa VERBOSE — como na angioplastia)
+Pelo acesso <strong><em>, realizou-se a cateterização seletiva da coronária ___ (esquerda/direita conforme o vaso) com cateter-guia </em></strong>. Após heparinização sistêmica com 100 UI/kg, posicionado o fio-guia de pressão (FFR) ___ (marca) até o terço distal da ___ (vaso), com equalização <strong>no tronco da coronária esquerda</strong> (sistema esquerdo) <strong>ou no óstio da coronária direita</strong> (sistema direito). [Nitrato IC, se usado.] Procedeu-se à indução de hiperemia com adenosina IV ___ µg/kg/min (se FFR), obtendo-se os valores abaixo. [Pullback focal/difuso, se realizado.]</p>
 <p><strong>Resultados</strong>
-DFR/RFR: ___ (valor de referência: &gt; 0.89). FFR (se realizado): ___ (valor de referência &gt; 0.80).
-Pullback (se aplicável): focal/difuso - ___.</p>
-<p><strong>CONCLUSÃO:</strong> Avaliação fisiológica de ___ com iFR/RFR ___ e/ou FFR ___, positiva/negativa/limítrofe para isquemia no segmento avaliado.</p>
+DFR/RFR: ___ (referência &gt; 0,89). FFR (se realizado): ___ (referência &gt; 0,80).</p>
+<p><strong>CONCLUSÃO:</strong> Avaliação fisiológica da ___ com iFR/RFR ___ e/ou FFR ___, positiva/negativa/limítrofe para isquemia no segmento avaliado.</p>
 <hr />
 <h2>7) Angioplastia — Variações rápidas (colar no corpo do procedimento)</h2>
 <ul>
@@ -195,7 +234,7 @@ usar só o que foi ditado; padronizar apenas a forma.</p>
 <p><strong>Segmentos coronários — sempre vaso + terço:</strong>
 - CD: terço proximal / médio / distal.
 - DA: terço proximal / médio / distal. Diagonais: 1ª, 2ª, 3ª diagonal (sem número → "diagonal").
-- Cx: terço proximal / médio / distal. Marginais obtusas: 1ª, 2ª, 3ª (sem número → "marginal obtusa").
+- Cx: terço proximal / médio / distal. Marginais esquerdas: 1ª, 2ª, 3ª (sem número → "marginal esquerda").
 - TCE: ostial / médio / distal.
 - Marginal aguda; Ramus/intermédio/bissectriz.
 - <strong>RVP (ramo ventricular posterior) ≠ DP (descendente posterior)</strong> — nunca confundir.
